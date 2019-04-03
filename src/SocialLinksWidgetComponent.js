@@ -4,9 +4,10 @@ import * as Scrivito from 'scrivito';
 
 
 Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
-const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + widget.get('textToShare') + '&url=https://mdwp.de/' + widget.get('url');
-const linkToFb = 'https://facebook.com/sharer/sharer.php?u=https://mdwp.de/' + widget.get('url');
-const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.mdwp.de/&title=Aus%20dem%20mdwp%20Blog&summary=Test&source=https%3A%2F%2Fwww.mdwp.de';
+const title = widget.get('title');
+const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + widget.get('textToShare') + '&url=' + widget.get('url');
+const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + widget.get('url');
+const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + widget.get('url') + '&summary=' + widget.get('textToShare') + '&source=' +  widget.get('url');
 
 /*if (!widget.get('textToShare').length) {
   return (
@@ -19,7 +20,7 @@ const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=http
 return (
 <div>
 <div className="share-head">
-<strong>Teile diesen Artikel!</strong>
+<strong>{title}</strong>
 <div className="share">
 
 <a href={linkToTwitter} target="_blank" className="resp-sharing-button__link">
