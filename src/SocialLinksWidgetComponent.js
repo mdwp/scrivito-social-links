@@ -7,7 +7,7 @@ Scrivito.provideComponent('SocialLinksWidget', ({ widget }) => {
 const title = widget.get('title');
 const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + widget.get('textToShare') + '&url=' + widget.get('url');
 const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + widget.get('url');
-const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + widget.get('url') + '&summary=' + widget.get('textToShare') + '&source=' +  widget.get('url');
+const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + widget.get('url') + '&title=' + widget.get('textToShare') +  '&summary=' + widget.get('textToShare') + '&source=' +  widget.get('url');
 
 /*if (!widget.get('textToShare').length) {
   return (

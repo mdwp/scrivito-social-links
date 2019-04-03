@@ -21,6 +21,7 @@ Scrivito.provideEditingConfig('SocialLinksWidget', {
         },
     },
     properties: [
+        'title',
         'url',
         'textToShare',
     ]
