@@ -9,13 +9,13 @@ const linkToTwitter = 'https://twitter.com/intent/tweet/?text=' + widget.get('te
 const linkToFb = 'https://facebook.com/sharer/sharer.php?u=' + widget.get('url');
 const linkToLinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=' + widget.get('url') + '&title=' + widget.get('textToShare') +  '&summary=' + widget.get('textToShare') + '&source=' +  widget.get('url');
 
-/*if (!widget.get('textToShare').length) {
+if (!title.length && Scrivito.isInPlaceEditingActive()) {
   return (
-    <InPlaceEditingPlaceholder center={ true }>
-      Add text to share in widget properties.
-    </InPlaceEditingPlaceholder>
+      <h4 className="text-center">
+        Provide the title and text to share in the widget properties.
+      </h4>
   );
-}*/
+}
 
 return (
 <div>
